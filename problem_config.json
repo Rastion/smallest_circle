@@ -1,0 +1,40 @@
+{
+    "entry_point": "smallest_circle_problem:SmallestCircleProblem",
+    "default_params": {
+      "instance_file": "instances/10points.txt"
+    },
+    "problem_type": "Smallest Enclosing Circle",
+    "description": "Given a set of points in the plane, the goal is to find the circle with the minimal radius that contains all the points. The decision variables are the x and y coordinates of the circle's center. The radius is computed as the maximum Euclidean distance from the center to any point in the instance.",
+    "keywords": [
+      "smallest circle",
+      "minimum enclosing circle",
+      "geometry",
+      "optimization",
+      "mathematics"
+    ],
+    "data_format": {
+      "instance_file": {
+        "format": "The first token is an integer representing the number of points. Each subsequent pair of tokens represents the x and y coordinates of a point."
+      }
+    },
+    "decision_variables": {
+      "center": {
+        "type": "list of float",
+        "description": "A list of two floats [x, y] representing the coordinates of the circle's center. The domain for x is [min_x, max_x] and for y is [min_y, max_y], as determined from the instance."
+      }
+    },
+    "objective": {
+      "type": "minimization",
+      "function": "r = max_{point in instance} sqrt((x - x_i)^2 + (y - y_i)^2)",
+      "description": "Minimize the radius of the circle that encloses all points."
+    },
+    "solution_representation": "A list of two floats representing the center of the circle, with the objective value being the minimal radius required to cover all points.",
+    "compatible_optimizers": [
+      "genetic_algorithm",
+      "simulated_annealing",
+      "particle_swarm",
+      "tabu_search",
+      "rl_optimizer"
+    ]
+  }
+  
