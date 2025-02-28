@@ -3,14 +3,17 @@
     "default_params": {
       "instance_file": "instances/10points.txt"
     },
-    "problem_type": "Smallest Enclosing Circle",
+    "creator": "Rastion",
+    "type": "problem",
+    "problem_name": "Smallest enclosing circle",
     "description": "Given a set of points in the plane, the goal is to find the circle with the minimal radius that contains all the points. The decision variables are the x and y coordinates of the circle's center. The radius is computed as the maximum Euclidean distance from the center to any point in the instance.",
+    "link_to_dataset": "https://github.com/Rastion/smallest_circle/blob/main/instances/10points.txt",
     "keywords": [
       "smallest circle",
       "minimum enclosing circle",
       "geometry",
       "optimization",
-      "mathematics"
+      "mathematical function"
     ],
     "data_format": {
       "instance_file": {
@@ -29,12 +32,8 @@
       "description": "Minimize the radius of the circle that encloses all points."
     },
     "solution_representation": "A list of two floats representing the center of the circle, with the objective value being the minimal radius required to cover all points.",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search",
-      "rl_optimizer"
+    "formulations": [
+      ""
     ]
   }
   
